@@ -1,0 +1,9 @@
+---
+applications:
+- name: sapio-api-<your username>
+  memory: 700M
+  instances: 1
+  random-route: false
+  path: ../target/sapio-scp-workshop-0.0.1-SNAPSHOT.jar
+#  env:
+#    API_KEY: 'my-api-key'
