@@ -4,6 +4,8 @@ applications:
   memory: 700M
   instances: 1
   random-route: false
+  buildpacks:
+    - java_buildpack
   path: ../target/sapio-scp-workshop-0.0.1-SNAPSHOT.jar
 #  env:
-#    API_KEY: 'my-api-key'
+#    SAP_API_HUB_KEY: 'gDdyacGxfE0ER1TPW7i5HCSvhIRdAYvN'
