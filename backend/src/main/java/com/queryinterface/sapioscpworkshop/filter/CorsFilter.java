@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 
 /**
- * Should be replaced by a proper Cors management
+ * Should be replaced by a proper CORS management
  */
 @Component
 public class CorsFilter implements Filter {

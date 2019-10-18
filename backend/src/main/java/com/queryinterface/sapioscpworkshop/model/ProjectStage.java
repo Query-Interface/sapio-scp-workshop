@@ -1,4 +1,4 @@
-package com.queryinterface.sapioscpworkshop;
+package com.queryinterface.sapioscpworkshop.model;
 
 import java.util.Arrays;
 import java.util.Optional;

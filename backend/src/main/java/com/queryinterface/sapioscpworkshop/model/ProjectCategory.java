@@ -1,4 +1,4 @@
-package com.queryinterface.sapioscpworkshop;
+package com.queryinterface.sapioscpworkshop.model;
 
 public enum ProjectCategory {
     Internal("I"),

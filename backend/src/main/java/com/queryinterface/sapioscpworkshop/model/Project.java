@@ -1,5 +1,7 @@
-package com.queryinterface.sapioscpworkshop;
+package com.queryinterface.sapioscpworkshop.model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Project {
@@ -13,6 +15,14 @@ public class Project {
     private String customerId = "";
     private String currency = "EUR";
     private String projectManagerId = "";
+    private String profitCenter = "SAP.iO Green Tech";
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
+    
+    public Project() {
+    	startDate = LocalDateTime.now();
+    	endDate = startDate.plusMonths(1);
+    }
 
     @Override
     public String toString() {
@@ -84,7 +94,15 @@ public class Project {
         return projectStage;
     }
 
-    public void setProjectStage(ProjectStage projectStage) {
+    public String getProfitCenter() {
+		return profitCenter;
+	}
+
+	public void setProfitCenter(String profitCenter) {
+		this.profitCenter = profitCenter;
+	}
+
+	public void setProjectStage(ProjectStage projectStage) {
         this.projectStage = projectStage;
     }
 
@@ -136,4 +154,21 @@ public class Project {
     public boolean isConfidential() {
         return this.confidential;
     }
+    
+    public LocalDateTime getStartDate() {
+		return startDate;
+	}
+
+	public LocalDateTime getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDateTime endDate) {
+		this.endDate = endDate;
+	}
+
+	public void setStartDate(LocalDateTime startDate) {
+		this.startDate = startDate;
+	}
+    
 }

@@ -1,14 +1,16 @@
 package com.queryinterface.sapioscpworkshop.controller;
 
-import com.queryinterface.sapioscpworkshop.Project;
-import com.queryinterface.sapioscpworkshop.WorkItem;
-import com.queryinterface.sapioscpworkshop.Workspace;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.queryinterface.sapioscpworkshop.model.Project;
+import com.queryinterface.sapioscpworkshop.model.WorkItem;
+import com.queryinterface.sapioscpworkshop.model.Workspace;
 
 @RestController
 @RequestMapping("/api")
@@ -32,7 +34,7 @@ public class ProjectsController {
     }
 
     @RequestMapping(method= RequestMethod.POST, path = "/projects", produces =  "application/json", consumes = "application/json")
-    public ResponseEntity<Project> addProject(/*Project project*/) {
+    public ResponseEntity<Project> addProject(final @RequestBody Project project) {
         client.addProject(new Project());
         return new ResponseEntity<>(new Project(), HttpStatus.OK);
     }
