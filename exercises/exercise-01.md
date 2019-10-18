@@ -45,8 +45,9 @@ The REST API consume the following service: [https://api.sap.com/api/_CPD_SC_EXT
 
 ## Step 6: Deploy the frontend
 - Navigate to frontend folder
-- update the `env.js` file to declare the API endpoint
-- execute the following command: `cf push cf/manifest.yml`
+- update the `env.config.js` file to declare your API endpoint
+    - use `cf apps` to find the API url
+- execute the following command: `cf push -f cf/manifest.yml`
 
 The `manifest.yml` describe how your application should be deployed by Cloud Foundry. It provides the following application to SCP: where to find the application, how much memory and disk is required by the application, the buildpack, route information, the required services,... More information can be found [here](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 

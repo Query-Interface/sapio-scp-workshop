@@ -1,0 +1,1 @@
+window.env={'apiroot':'http://localhost:8080'};
