@@ -23,7 +23,8 @@
                     <SearchField
                         id="searchField"
                         tooltip="{i18n>projectSearchTooltip}"
-                        search=".onSearch">
+                        search=".onSearch"
+                        visible="{/searchEnabled}">
                         <layoutData>
                             <OverflowToolbarLayoutData
                                 maxWidth="200px"

@@ -16,13 +16,17 @@ SCP provides lots of services to ease development application. We will see how t
 - Run the command `cf env sapio-scp-<username>` to check the result of the previous steps
 
 ## Step 3: Update the applications
-- TODO
+- Update the frontend source code by copying the code in the `exercices/solution` folder.
+- Build and deploy the frontend running the following commands:
+    - `npm install`
+    - `npm run build`
+    - `cf push -f cf/manifest.yml`
 
 ## Step 4: Create a new flag
 - Navigate to the feature flag dashboard, for this go to the [SCP Cockpit](https://cockpit.hanatrial.ondemand.com/#/home/welcome). Then Navigate to your space and click on the rest application (`sapio-scp-<username>`). Go to `Service Bindings` and in the `Actions` section, click on the `Open Dashboard` icon
 - Click on new Flag
-- Fill in the fields and ensure the state is set to `OFF`
-- Test the service response by calling the following URI: `https://sapio-scp-<username>.cfapps.eu10.hana.ondemand.com/api/ff/test`
+    - set name as `search`
+    - set a description
+    - ensure the state is set to `OFF`
+- Test the service response by calling the following URI: `https://sapio-scp-<username>.cfapps.eu10.hana.ondemand.com/api/ff/search`
 - Enable the flag in the dashboard and test again
-
-
