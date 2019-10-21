@@ -1,9 +1,9 @@
 ---
 applications:
-- name: sapio-front-<your username>
+- name: sapio-front-<username>
   memory: 200M
   instances: 1
   random-route: false
-  path: ..
+  path: ../dist
   buildpacks:
     - staticfile_buildpack

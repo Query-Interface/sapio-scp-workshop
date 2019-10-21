@@ -1,0 +1,4 @@
+specVersion: '1.0'
+metadata:
+  name: sapio-scp-workshop-front
+type: application

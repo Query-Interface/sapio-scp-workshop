@@ -1,0 +1,21 @@
+{
+  "name": "sapio-scp-workshop-front",
+  "version": "1.0.0",
+  "description": "UI5 frontend for SAP.io SAP Cloud Platform Workshop",
+  "scripts": {
+    "start": "ui5 serve --port 8090",
+    "build": "rimraf dist && ui5 build self-contained --a --exclude-task=createDebugFiles"
+  },
+  "author": "Query-Interface",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@openui5/sap.f": "^1.71.1",
+    "@openui5/sap.m": "^1.71.1",
+    "@openui5/sap.ui.core": "^1.71.1",
+    "@openui5/sap.ui.layout": "^1.71.1",
+    "@openui5/themelib_sap_belize": "^1.71.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0"
+  }
+}
