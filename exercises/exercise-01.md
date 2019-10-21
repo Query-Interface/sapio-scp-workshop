@@ -56,3 +56,7 @@ The REST API consume the following service: [https://api.sap.com/api/_CPD_SC_EXT
 - Execute the following command: `cf push -f cf/manifest.yml`
 
 The `manifest.yml` describe how your application should be deployed by Cloud Foundry. It provides the following information to SCP: where to find the application, how much memory and disk is required by the application, the buildpack, route information, the required services,... More information can be found [here](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
+
+## Step 7: Test our deployment
+- Use `cf apps` to display applications and their respective endpoints
+- Navigate to the frontent endpoint, the list of projects should appear after a small delay
