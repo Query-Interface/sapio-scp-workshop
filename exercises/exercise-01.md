@@ -24,7 +24,7 @@ Open a Command Prompt and try the following commands.
 - `cf login` (use the same credential as the one used for the SCP Cockpit)
 - Select your trial organization, if your user is already assigned to severals spaces
 - `cf apps` to display the list of deployed applications
-- `cf spacces` to display spaces
+- `cf spaces` to display spaces
 
 ## Step 3: Compile the REST API
 - Navigate to `backend` folder
