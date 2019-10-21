@@ -14,6 +14,8 @@ SAP Cloud Platform provides many services to ease the development of application
 - Bind the service to the REST application using the following command: `cf bind-service sapio-scp-<username> feature-flags-instance`
 - Restage the application to take new settings into account
 - Run the command `cf env sapio-scp-<username>` to check the result of the previous steps
+- Test the deployment by accesssing the following URI: `https://sapio-scp-<username>.cfapps.eu10.hana.ondemand.com/api/ff/test`
+    - it should return a status `missing` as response since we have not declared any Feature Flag.
 
 ## Step 3: Update the applications
 - Update the frontend source code by copying the code located in the `exercices/solution` folder.
