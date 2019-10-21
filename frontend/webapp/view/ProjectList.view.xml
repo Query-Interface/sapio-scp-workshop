@@ -4,15 +4,73 @@
    controllerName="sap.io.demo.project.controller.ProjectList">
 <Page title="{i18n>projectPageTitle}">
     <content>
-        <List
-            class="sapUiResponsiveMargin"
+        <Table id="table"
             width="auto"
-            items="{/projects}" >
+			items="{
+				path: '/projects',
+				sorter: {
+					path: 'id',
+					descending: false
+				}
+			}">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title
+                        id="tableHeader"
+                        text="{i18n/projectListTitle}"
+                        level="H3"/>
+                    <ToolbarSpacer />
+                    <SearchField
+                        id="searchField"
+                        tooltip="{i18n>projectSearchTooltip}"
+                        search=".onSearch">
+                        <layoutData>
+                            <OverflowToolbarLayoutData
+                                maxWidth="200px"
+                                priority="NeverOverflow"/>
+                        </layoutData>
+                    </SearchField>
+                </OverflowToolbar>
+			</headerToolbar>
+            <columns>
+                <Column id="idColumn">
+                    <Text text="{i18n>tableIdColumnTitle}" id="idColumnTitle"/>
+                </Column>
+                <Column id="nameColumn">
+                    <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                </Column>
+                <Column id="stageColumn">
+                    <Text text="{i18n>tableStageColumnTitle}" id="stageColumnTitle"/>
+                </Column>
+                <Column id="categoryColumn">
+                    <Text text="{i18n>tableCategoryColumnTitle}" id="categoryColumnTitle"/>
+                </Column>
+                <Column id="cosCenterColumn">
+                    <Text text="{i18n>tableCostCenterColumnTitle}" id="costCenterColumnTitle"/>
+                </Column>
+                <Column id="customerIdColumn">
+                    <Text text="{i18n>tableCustomerIdColumnTitle}" id="customerIdColumnTitle"/>
+                </Column>
+            </columns>
             <items>
-                <ObjectListItem
-                    title="{id} | {name}"/>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier
+                            title="{id}"/>
+                        <ObjectIdentifier
+                            title="{name}"/>
+                        <ObjectIdentifier
+                            title="{projectStage}"/>
+                        <ObjectIdentifier
+                            title="{category}"/>
+                        <ObjectIdentifier
+                            title="{costCenter}"/>
+                        <ObjectIdentifier
+                            title="{customerId}"/>
+                    </cells>
+                </ColumnListItem>
             </items>
-        </List>
+        </Table>
     </content>
 </Page>
 </mvc:View>
