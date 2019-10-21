@@ -38,6 +38,4 @@ public class ProjectsController {
         client.addProject(new Project());
         return new ResponseEntity<>(new Project(), HttpStatus.OK);
     }
-
-
 }

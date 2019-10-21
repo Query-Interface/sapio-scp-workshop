@@ -1,12 +1,23 @@
 # SAP.iO workshop to discover SAP Cloud Platform
 
+## Goal
+
+Demonstrate how an integration with S/4 HANA Cloud could be developed leveraging the SAP Cloud Platform capabilities. You will learn the following:
+- Deploy applications to SAP Cloud Platform Cloud Foundry
+- Basic Knowledge of SCP Cockpit and CF CLI
+- SAP API Hub
+- Discover services in CF Marketplace, deploy services and consume services
+
+
 ## Prerequisites
 
 ### Java JDK
 
  - Make sure JDK 8 or JDK 11 is installed on your machine.
- - Install any IDE with Maven support (Eclipse, Intellij Idea or VS Code with Java plugins).
+ - Install any IDE with Maven support (for example Eclipse, Intellij Idea or VS Code with Java plugins).
 
+### NPM
+ - Install [nodejs](https://nodejs.org/en/)
 
 ### GIT
 
@@ -33,5 +44,11 @@ For the training you should be able to deploy a test application to Cloud Foundr
    `cf login -a https://api.cf.eu10.hana.ondemand.com`
       
   3. Check that you can execute the command `cf apps` without error message.
+
+## Credits
+
+- Source code related to Feature Flags service in the REST Service comes from the following repository https://github.com/SAP/cloud-cf-feature-flags-sample
+
+## Other resources
   
 
