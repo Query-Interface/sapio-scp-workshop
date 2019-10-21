@@ -4,9 +4,9 @@
 
 Demonstrate how an integration with S/4 HANA Cloud could be developed leveraging the SAP Cloud Platform capabilities. You will learn the following:
 - Deploy applications to SAP Cloud Platform Cloud Foundry
-- Basic Knowledge of SCP Cockpit and CF CLI
-- SAP API Hub
-- Discover services in CF Marketplace, deploy services and consume services
+- Basic Knowledge of SAP Cloud Platform Cockpit and CF CLI
+- Discover S/4 HANA API in SAP API Hub
+- Discover services in CF Marketplace, deploy and consume services in your applications
 
 
 ## Prerequisites
@@ -24,9 +24,7 @@ Demonstrate how an integration with S/4 HANA Cloud could be developed leveraging
 Make sure you have git installed on your machine or install it:
 
 - For Windows: if you do not have git installed yet, install [Git Bash](https://gitforwindows.org/), then you can skip the next step. Alternatively, you can activate the WSL (Windows Subsystem for Linux) feature and then install one of the distribution available on the windows store ([see an example with Ubuntu](https://linuxhint.com/install_ubuntu_windows_10_wsl/))
-
 - For Mac: choose one of the options described [here](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git#Installing-on-Mac).
-
 
 ### Cloud Foundry CLI
 
@@ -48,7 +46,8 @@ For the training you should be able to deploy a test application to Cloud Foundr
 ## Credits
 
 - Source code related to Feature Flags service in the REST Service comes from the following repository https://github.com/SAP/cloud-cf-feature-flags-sample
+- Some code is extracted from the following openui5 template: https://github.com/SAP/openui5-worklist-app
 
 ## Other resources
-  
+- [S/4 HANA Cloud Integration](https://blogs.sap.com/2018/04/10/s4hana-cloud-integration-commercial-project-part-1/)
 
