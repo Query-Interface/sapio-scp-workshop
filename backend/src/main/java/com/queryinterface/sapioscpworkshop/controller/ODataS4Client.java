@@ -135,9 +135,8 @@ public class ODataS4Client {
         List<Workspace> workspaces;
         ODataEntitySetRequest<ClientEntitySet> request = this.client.getRetrieveRequestFactory().getEntitySetRequest(
         		this.client.newURIBuilder(projectReadApiEndpoint).appendEntitySetSegment(ENTITYSET_PROJECT).appendKeySegment(projectId).appendEntitySetSegment(ENTITYSET_WORKPACKAGE).build());
-        		//new URI(projectReadApiEndpoint + "/ProjectSet('"+ projectId+"')/WorkpackageSet"));
         request.addCustomHeader(HEADER_APIKEY, configuration.getApiKey().orElseThrow(() -> new S4ServerException()));
-        request.addCustomHeader(HEADER_ACCEPT, "application/json");
+        request.addCustomHeader(HEADER_ACCEPT, "application/xml");
         ODataRetrieveResponse<ClientEntitySet> response = request.execute();
         List<ClientEntity> entities = response.getBody().getEntities();
         workspaces = entities.stream().map( e -> {
@@ -152,10 +151,9 @@ public class ODataS4Client {
     public List<WorkItem> getWorkItems(final String workspaceId) {
         List<WorkItem> workItems;
         ODataEntitySetRequest<ClientEntitySet> request = this.client.getRetrieveRequestFactory().getEntitySetRequest(
-        		//new URI(projectReadApiEndpoint + "/WorkpackageSet('"+ workspaceId+"')/WorkItemSet"));
         		this.client.newURIBuilder(projectReadApiEndpoint).appendEntitySetSegment(ENTITYSET_WORKPACKAGE).appendKeySegment(workspaceId).appendEntitySetSegment(ENTITYSET_WORK_ITEM).build());
         request.addCustomHeader(HEADER_APIKEY, configuration.getApiKey().orElseThrow(() -> new S4ServerException()));
-        request.addCustomHeader(HEADER_ACCEPT, "application/json");
+        request.addCustomHeader(HEADER_ACCEPT, "application/xml");
         ODataRetrieveResponse<ClientEntitySet> response = request.execute();
         List<ClientEntity> entities = response.getBody().getEntities();
         workItems = entities.stream().map( e -> {
