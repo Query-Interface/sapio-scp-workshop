@@ -8,6 +8,7 @@ Demonstrate how an integration with S/4 HANA Cloud could be developed leveraging
 - Discover S/4 HANA API in SAP API Hub
 - Discover services in CF Marketplace, deploy and consume services in your applications
 
+![Sample Application architecture overview](/scp-workshop.png)
 
 ## Prerequisites
 
